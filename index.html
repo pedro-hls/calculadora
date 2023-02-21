@@ -9,41 +9,45 @@
     <title> Calculadora </title>
 </head>
 <body class="pageContainer">
+
         <header class="header">
 
-            <h1 class="title"> calc </h1>
-
-            <i class="fa-solid fa-palette"></i>
+            <h1 class="title"> calculadora </h1>
 
         </header>
+
         <main class="calculator">
-            <div class="display">
-                <div class="previousNumber"></div>
-                <div class="atualNumber"></div>
-            </div>
+            
+            <div class="previousOperator operators">234431431413431431413431431434</div>
+            <div class="currentOperator operators">3143141343143</div>
+
+
             <section class="buttonsContainer">
-                <button class="number7 calcButton tinyButton"> 7 </button>
-                <button class="number8 calcButton tinyButton"> 8 </button>
-                <button class="number9 calcButton tinyButton"> 9 </button>
-                <button class="delButton calcButton tinyButton coloredButtons"> del </button>
-                <button class="number4 calcButton tinyButton"> 4 </button>
-                <button class="number5 calcButton tinyButton"> 5 </button>
-                <button class="number6 calcButton tinyButton"> 6 </button>
+                <button data-number class="calcButton tinyButton"> 7 </button>
+                <button data-number class="calcButton tinyButton"> 8 </button>
+                <button data-number class="calcButton tinyButton"> 9 </button>
+                <button data-delete class="delButton calcButton coloredButtons"> del </button>
+                <button data-number class="calcButton tinyButton"> 4 </button>
+                <button data-number class="calcButton tinyButton"> 5 </button>
+                <button data-operator data-number class="calcButton tinyButton"> 6 </button>
                 <button class="plusButton calcButton tinyButton"> + </button>
-                <button class="number1 calcButton tinyButton"> 1 </button>
-                <button class="number2 calcButton tinyButton"> 2 </button>
-                <button class="number3 calcButton tinyButton"> 3 </button>
-                <button class="minusButton calcButton tinyButton"> - </button>
-                <button class="dotButton calcButton tinyButton"> . </button>
-                <button class="number0 calcButton tinyButton"> 0 </button>
-                <button class="divisionButton calcButton tinyButton"> / </button>
-                <button class="timesButton calcButton tinyButton"> x </button>
-                <button class="resetButton calcButton largeButton coloredButtons"> reset </button>
-                <button class="resButton calcButton largeButton iqualButton"> = </button>
+                <button data-number class="calcButton tinyButton"> 1 </button>
+                <button data-number class="calcButton tinyButton"> 2 </button>
+                <button data-number class="calcButton tinyButton"> 3 </button>
+                <button data-operator class="calcButton tinyButton"> - </button>
+                <button data-number class="calcButton tinyButton"> . </button>
+                <button data-number class="calcButton tinyButton"> 0 </button>
+                <button data-operator class="calcButton tinyButton"> / </button>
+                <button data-operator class="calcButton tinyButton"> x </button>
+                <button data-reset class="calcButton largeButton coloredButtons"> reset </button>
+                <button data-equal class="calcButton largeButton equalButton"> = </button>
             </section>
+
         </main>
 
+        <script src="assets/script.js"></script>
 
         <script src="https://kit.fontawesome.com/a6c6a11ad0.js" crossorigin="anonymous"></script>
+
 </body>
 </html>
