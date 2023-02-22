@@ -9,13 +9,22 @@
     --blue: #2B3964;
     --branco: #FDF9EC;
     --cinza: #cac7bb;
-    --laranja: #D2664B;
+    --laranja: #F46036;
+
+    /* light theme */
+    --preto: #272727;
+    --verde: #87C0AC;
+    --rosa-choque: #F7B6B6;
+    --rosa: #FCE4E4;
+    --rosa-claro: #FDEDED;
+    --rosa-clarinho: #FEF6F6;
 }
 
 * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    transition: 1s
 }
 
 .pageContainer {
@@ -26,11 +35,8 @@
 }
 
 .header {
-    min-width: 300;
-    margin: 30px 30px 0px 30px;
-    padding: 20px 2px;
-    display: flex;
-    align-items: center;
+    margin: 30px 0px 0px 15px;
+    padding: 20px 0px;
 }
 
 .title {
@@ -38,10 +44,18 @@
     color: var(--branco);
     font-size: 20px;
     font-weight: 500;
+    margin: 0px 0px 15px 0px;
 }
 
 .icon {
     color: var(--branco);
+    font-size: 1.5em;
+    margin: auto;
+    padding: 50px 0px 15px 0px; 
+}
+
+.fa-moon {
+    color: var(--verde);
 }
 
 .operators {
@@ -50,22 +64,25 @@
     background-color: var(--darkest-blue);
     overflow-wrap: break-word;
     margin: 0px 15px 0px 15px;
+    max-height: 200px;
+    border-radius: 10px;
 }
 
 .previousOperator {
     color: #cac7bba9;
     font-size: 1.1em;
-    border-radius: 10px 10px 0px 0px;
-    padding: 15px 15px 10px 15px;
+    padding: 15px 15px 0px 15px;
+    min-height: 50px;
 }
 
 .currentOperator {
     color: var(--branco);
     font-size: 2.5em;
     font-weight: 600;
-    border-radius: 0px 0px 10px 10px;
     margin-bottom: 0.5em;
     padding: 0px 15px;
+    padding-bottom: 15px;
+    min-height: 80px;
 }
 
 .calculator {
@@ -99,7 +116,7 @@
     color: var(--dark-blue);
 }
 
-.calcButton:hover {
+.calcButton:active {
     box-shadow: 0px 2px #C2C2C2;
     transform: translateY(3px);
 }
@@ -114,16 +131,69 @@
     box-shadow: 0px 5px #1F2947;
 }
 
-.coloredButtons:hover {
+.coloredButtons:active {
     box-shadow: 0px 2px #1F2947;
 }
 
 .equalButton {
-    background-color: #F46036;
+    background-color: var(--laranja);
     color: var(--branco);
     box-shadow: 0px 5px #AE2D09;
 }
 
-.equalButton:hover {
+.equalButton:active {
     box-shadow: 0px 2px #AE2D09;
+}
+
+/* Light Theme */
+
+.lightPageContainer {
+    background-color: var(--rosa-clarinho);
+}
+
+.lightBackground {
+    background-color: var(--rosa);
+}
+
+.lightEqualButton {
+    background-color: var(--verde);
+    box-shadow: 0px 5px #6CB299;
+    color: #FDEDED;
+}
+
+.lightEqualButton:active {
+    box-shadow: 0px 2px #6CB299;
+}
+
+.lightDisplay {
+    background-color: var(--verde);
+}
+
+.lightColoredButtons {
+    background-color: var(--rosa-choque);
+    box-shadow: 0px 5px #F39191;
+    color: #FDEDED;
+}
+
+.lightColoredButtons:active {
+    background-color: var(--rosa-choque);
+    box-shadow: 0px 2px #F39191;
+}
+
+.lightCalcButtons {
+    background-color: #FEF6F6;
+    color: var(--preto);
+    box-shadow: 0px 5px #F9C8C8;
+}
+
+.lightCalcButtons:active {
+    box-shadow: 0px 2px #F9C8C8;
+}
+
+.lightPreviousOperator {
+    color: var(--preto);
+}
+
+.lightTitle {
+    color: var(--verde);
 }
