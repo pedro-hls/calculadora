@@ -24,7 +24,8 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    transition: 1s
+    transition: 1s;
+    font-family: var(--font-default);
 }
 
 .pageContainer {
@@ -40,7 +41,6 @@
 }
 
 .title {
-    font-family: var(--font-default);
     color: var(--branco);
     font-size: 20px;
     font-weight: 500;
@@ -59,7 +59,6 @@
 }
 
 .operators {
-    font-family: var(--font-default);
     text-align: right;
     background-color: var(--darkest-blue);
     overflow-wrap: break-word;
@@ -103,7 +102,6 @@
 }
 
 .calcButton {
-    font-family: var(--font-default);
     border: none;
     border-radius: 5px;
     box-shadow: 0px 5px #C2C2C2;
@@ -143,6 +141,12 @@
 
 .equalButton:active {
     box-shadow: 0px 2px #AE2D09;
+}
+
+.credits {
+    color: var(--branco);
+    text-decoration: none;
+    cursor: pointer;
 }
 
 /* Light Theme */
@@ -196,4 +200,8 @@
 
 .lightTitle {
     color: var(--verde);
+}
+
+.lightCredits {
+    color: var(--rosa-choque);
 }

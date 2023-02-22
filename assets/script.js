@@ -14,8 +14,8 @@ class Calculator {
         this.reset()
     }
 
-
     calculate(){
+
         let result;
 
         const _previousOperandNumber = Number(this.previousOperator)
@@ -41,9 +41,11 @@ class Calculator {
         this.currentOperator = result;
         this.operation = undefined
         this.previousOperator = ''
+
     }
 
     appendNumber(number) {
+
         if (this.currentOperator.includes('.') && number === '.') {
             return }
         if (this.currentOperator == '' && number === '.') {
@@ -52,9 +54,11 @@ class Calculator {
         if (this.currentOperator.length >= 18) {
             return }
         this.currentOperator = `${this.currentOperator}${number.toString()}`
+
     }
 
     chooseOperation(operation) {
+
         if (this.currentOperator == '') return
 
         if (this.previousOperator !== '') {
@@ -65,47 +69,55 @@ class Calculator {
 
         this.previousOperator = this.currentOperator;
         this.currentOperator = '';
+
     }
 
     reset() {
+
         this.currentOperator = '';
         this.previousOperator = '';
         this.operation = undefined
+
     }
     
     updateDisplay() {
+
         this.previousOperatorText.innerText = `${this.previousOperator} ${this.operation || ""}`;
         this.currentOperatorText.innerText = this.currentOperator;
+
     }
 
     deleteCurrent() {
-        this.currentOperator = this.currentOperator.slice(0, -1);
+
+        this.currentOperator = this.currentOperator.slice(0, this.currentOperator.length-1);
+
+
     }
 }
 
 const calculator = new Calculator( previousOperatorText, currentOperatorText)
 
 for (const numberButton of numberButtons) {
+
     numberButton.addEventListener('click', () => {
         calculator.appendNumber(numberButton.innerText);
         calculator.updateDisplay();
+
     });
 }
 
 for (const operationButton of operationButtons) {
+
     operationButton.addEventListener('click', () => {
     calculator.chooseOperation(operationButton.innerText);
     calculator.updateDisplay()
+    
 })
 }
 
 resetButton.addEventListener('click', () => {
     calculator.reset();
     calculator.updateDisplay()
-})
-
-deleteButton.addEventListener('click', () => {
-    calculator.deleteCurrent()
 })
 
 equalButton.addEventListener('click', () => {
@@ -120,6 +132,7 @@ deleteButton.addEventListener('click', () => {
 
 
 function theme() {
+
     const buttonsList = document.querySelectorAll('.tinyButton')
     for (let i = 0; i < buttonsList.length; i++) {
         document.querySelectorAll('.tinyButton')[i].classList.toggle('lightCalcButtons')
@@ -136,6 +149,7 @@ function theme() {
     document.querySelector('.operators').classList.toggle('lightDisplay')
     document.querySelector('.previousOperator').classList.toggle('lightPreviousOperator')
     document.querySelector('.title').classList.toggle('lightTitle')
+    document.querySelector('.credits').classList.toggle('lightCredits')
 
     const icon = document.querySelector('.icon')
     if (icon.classList.contains('fa-sun')){
